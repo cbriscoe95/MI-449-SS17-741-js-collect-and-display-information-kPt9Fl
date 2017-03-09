@@ -6,6 +6,7 @@ var descriptionText = document.getElementById('description')
 var emailText = document.getElementById('email')
 var phoneText = document.getElementById('phone')
 
+// First name
 firstName.addEventListener('input', function () {
   var first = firstName.value
   var last = lastName.value
@@ -14,6 +15,7 @@ firstName.addEventListener('input', function () {
   rawText.textContent = '<h1>Hi, my name is ' + first + ' ' + last + '</h1>'
 })
 
+// Last name
 lastName.addEventListener('input', function () {
   var first = firstName.value
   var last = lastName.value
@@ -22,6 +24,7 @@ lastName.addEventListener('input', function () {
   rawText.textContent = '<h1>Hi, my name is ' + first + ' ' + last + '</h1>'
 })
 
+// Description
 descriptionText.addEventListener('input', function () {
   var first = firstName.value
   var last = lastName.value
@@ -31,7 +34,7 @@ descriptionText.addEventListener('input', function () {
   rawText.textContent = '<h1>Hi, my name is ' + first + ' ' + last + '</h1>' + description + '</p>'
 })
 
-// Need to add rendered and raw html for email and phone: 2/14 12:51
+// Email
 emailText.addEventListener('input', function () {
   var first = firstName.value
   var last = lastName.value
@@ -39,12 +42,15 @@ emailText.addEventListener('input', function () {
   var email = emailText.value
 
   renderedText.innerHTML = '<h1>Hi, my name is ' + first + ' ' + last + '</h1>' + '<p>' + description + '</p>' +
-  'if you\'re interested in a date, you can email me at ' + email
+  'if you\'re interested in a date, you can email me at ' +
+  '<a href="mailto:EMAIL_ADDRESS" target="_blank">' + email + '</a>'
 
   rawText.textContent = '<h1>Hi, my name is ' + first + ' ' + last + '</h1>' + '<p>' + description + '</p>' +
-  'if you\'re interested in a date, you can email me at ' + email
+  'if you\'re interested in a date, you can email me at ' +
+  '<a href="mailto:EMAIL_ADDRESS" target="_blank">' + email + '</a>'
 })
 
+// Phone number
 phoneText.addEventListener('input', function () {
   var first = firstName.value
   var last = lastName.value
@@ -53,8 +59,10 @@ phoneText.addEventListener('input', function () {
   var phone = phoneText.value
 
   renderedText.innerHTML = '<h1>Hi, my name is ' + first + ' ' + last + '</h1>' + '<p>' + description + '</p>' +
-  'if you\'re interested in a date, you can email me at ' + email + ' or give me a call at ' + phone
+  'if you\'re interested in a date, you can email me at ' + '<a href="mailto:EMAIL_ADDRESS" target="_blank">' +
+   email + '</a>' + ' or give me a call at ' + '<a href="tel:PHONE_NUMBER" target="_blank">' + phone + '</a>'
 
   rawText.textContent = '<h1>Hi, my name is ' + first + ' ' + last + '</h1>' + '<p>' + description + '</p>' +
-  'if you\'re interested in a date, you can email me at ' + email + ' or give me a call at ' + phone
+  'if you\'re interested in a date, you can email me at ' + '<a href="mailto:EMAIL_ADDRESS" target="_blank">' +
+   email + '</a>' + ' or give me a call at ' + '<a href="tel:PHONE_NUMBER" target="_blank">' + phone + '</a>'
 })
