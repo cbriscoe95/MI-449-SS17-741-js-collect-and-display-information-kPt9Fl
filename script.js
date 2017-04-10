@@ -7,12 +7,17 @@ var email = document.getElementById('email')
 var phone = document.getElementById('phone')
 
 function profile () {
-  var profileText = '<h1>Hi, my name is ' + firstName.value + ' ' + lastName.value + '</h1>' + '<p>' +
-  description.value + '</p>' + 'if you\'re interested in a date, you can email me at ' + '<a href="mailto:' +
-  email.value + '" target="_blank">' + email.value + '</a>' + ' or give me a call at ' + '<a href="tel:' +
-  phone.value + '" target="_blank">' + phone.value + '</a>'
+  var profileText =
+    '<h1>Hi, my name is ' + firstName.value + ' ' + lastName.value + '</h1>' +
+    '<p>' + description.value + '</p>' +
+    'if you\'re interested in a date, you can email me at ' + '<a href="mailto:' +
+    email.value + '" target="_blank">' + email.value + '</a>' +
+    ' or give me a call at ' + '<a href="tel:' + phone.value + '" target="_blank">' + phone.value + '</a>'
 
+  // Generated rendered text
   renderedText.innerHTML = profileText
+
+  // Raw HTML text
   rawText.textContent = profileText
 }
 
